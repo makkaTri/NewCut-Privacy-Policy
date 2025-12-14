@@ -12,10 +12,10 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000;
+            color: #ddd;
             min-height: 100vh;
             padding: 20px;
         }
@@ -23,127 +23,318 @@
         .container {
             max-width: 900px;
             margin: 40px auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: #111;
+            border-radius: 16px;
             overflow: hidden;
             padding: 40px;
+            box-shadow: 0 10px 30px rgba(196, 164, 132, 0.15);
+            border: 1px solid rgba(196, 164, 132, 0.1);
         }
         
+        /* HEADER STIL */
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #764ba2;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #C4A484;
         }
         
         .logo {
-            font-size: 2.5em;
-            color: #764ba2;
+            font-size: 2.8em;
+            color: #C4A484;
             font-weight: 800;
             margin-bottom: 10px;
             letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(196, 164, 132, 0.3);
         }
         
         .logo span {
-            color: #667eea;
+            color: #fff;
+            font-weight: 300;
         }
         
         .subtitle {
-            color: #666;
+            color: #aaa;
             font-size: 1.2em;
+            letter-spacing: 1.5px;
+            margin-top: 5px;
         }
         
+        /* NASLOVI */
         h1 {
-            color: #333;
-            margin: 30px 0 20px;
+            color: #C4A484;
+            margin: 30px 0 25px;
             font-size: 2em;
-        }
-        
-        h2 {
-            color: #764ba2;
-            margin: 25px 0 15px;
-            font-size: 1.5em;
-            border-left: 4px solid #667eea;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border-left: 4px solid #C4A484;
             padding-left: 15px;
         }
         
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
+        h2 {
+            color: #C4A484;
+            margin: 25px 0 15px;
+            font-size: 1.5em;
+            font-weight: 700;
+            background: rgba(196, 164, 132, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #C4A484;
         }
         
+        /* PARAGRAFI */
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* LISTE */
         ul {
-            margin: 15px 0 15px 30px;
+            margin: 15px 0 20px 25px;
+            list-style: none;
         }
         
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
         }
         
+        li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C4A484;
+            font-weight: bold;
+        }
+        
+        /* KONTAKT INFO */
         .contact-info {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #1A1A1A;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 12px;
             margin: 30px 0;
-            border-left: 5px solid #764ba2;
+            border-left: 4px solid #C4A484;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .contact-info h3 {
-            color: #333;
-            margin-bottom: 15px;
+            color: #C4A484;
+            margin-bottom: 20px;
             font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         
         .contact-detail {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-detail:hover {
+            background: rgba(196, 164, 132, 0.1);
+            transform: translateX(5px);
         }
         
         .contact-detail i {
-            color: #764ba2;
-            margin-right: 10px;
+            color: #C4A484;
+            margin-right: 15px;
             font-size: 1.2em;
+            min-width: 25px;
         }
         
+        /* RADNO VREME STIL */
+        .hours-container {
+            margin: 20px 0;
+        }
+        
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 15px;
+            border-bottom: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+        
+        .hours-row:hover {
+            background: rgba(196, 164, 132, 0.05);
+        }
+        
+        .hours-day {
+            color: #ccc;
+            font-weight: 600;
+        }
+        
+        .hours-time {
+            color: #C4A484;
+            font-weight: 700;
+        }
+        
+        .closed-text {
+            color: #ff5555;
+            font-weight: 700;
+        }
+        
+        /* LAST UPDATED */
+        .last-updated {
+            background: #1A1A1A;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 1px solid rgba(196, 164, 132, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .last-updated i {
+            color: #C4A484;
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+        
+        .last-updated span {
+            color: #C4A484;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        /* FOOTER */
         .footer {
             text-align: center;
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
+            padding-top: 25px;
+            border-top: 1px solid #222;
             color: #666;
             font-size: 0.9em;
         }
         
-        .last-updated {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            font-style: italic;
+        .footer p:first-child {
+            color: #C4A484;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
         
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 25px 20px;
                 margin: 20px auto;
+                border-radius: 12px;
             }
             
             .logo {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             
             h1 {
                 font-size: 1.7em;
+                margin: 25px 0 20px;
             }
             
             h2 {
                 font-size: 1.3em;
+                padding: 10px 15px;
             }
+            
+            .contact-info {
+                padding: 20px;
+            }
+            
+            .contact-detail {
+                padding: 8px 10px;
+                font-size: 0.95em;
+            }
+            
+            .hours-row {
+                flex-direction: column;
+                gap: 5px;
+                padding: 10px;
+            }
+            
+            .hours-time {
+                font-size: 0.95em;
+            }
+        }
+        
+        /* ANIMACIJE */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .container {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        h1, h2 {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #C4A484;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b89470;
+        }
+        
+        /* LINKOVI */
+        a {
+            color: #C4A484;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        a:hover {
+            color: #fff;
+            border-bottom: 1px solid #C4A484;
+        }
+        
+        /* HIGHLIGHT */
+        .highlight {
+            color: #C4A484;
+            font-weight: 600;
+            background: rgba(196, 164, 132, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        /* SEPARATOR */
+        .separator {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #C4A484, transparent);
+            margin: 30px 0;
+            width: 100%;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -155,12 +346,13 @@
         <h1>Privacy Policy (Politika privatnosti)</h1>
         
         <div class="last-updated">
-            <i class="fas fa-calendar-alt"></i> Poslednje ažuriranje: 11. decembar 2024.
+            <i class="fas fa-calendar-alt"></i> 
+            <div>Poslednje ažuriranje: <span>14. decembar 2025.</span></div>
         </div>
         
         <h2>1. Uvod</h2>
         <p>
-            Frizerski salon "New Cut" (u daljem tekstu: "mi", "nas", "salon") poštuje vašu privatnost i 
+            Frizerski salon <span class="highlight">"New Cut"</span> (u daljem tekstu: "mi", "nas", "salon") poštuje vašu privatnost i 
             posvećen je zaštiti vaših ličnih podataka. Ova Politika privatnosti objašnjava kako prikupljamo, 
             koristimo, čuvamo i štitimo vaše lične podatke kada koristite našu mobilnu aplikaciju i usluge.
         </p>
@@ -208,7 +400,7 @@
         <h2>6. Čuvanje podataka</h2>
         <p>
             Čuvamo vaše lične podatke onoliko dugo koliko je neophodno za svrhe za koje su prikupljeni, 
-            u skladu sa zakonskim obavezama. Podaci o terminima čuvaju se 3 godine od datuma termina.
+            u skladu sa zakonskim obavezama. Podaci o terminima čuvaju se <span class="highlight">3 godine</span> od datuma termina.
         </p>
         
         <h2>7. Vaša prava</h2>
@@ -222,20 +414,40 @@
             <li><strong>Pravo na prenosivost:</strong> Možete zatražiti prenos podataka</li>
         </ul>
         
-        <h2>8. Bezbednost podataka</h2>
+        <div class="separator"></div>
+        
+        <h2>8. Radno vreme salona</h2>
+        <div class="hours-container">
+            <div class="hours-row">
+                <div class="hours-day">Ponedeljak - Petak</div>
+                <div class="hours-time">08:00 - 21:00</div>
+            </div>
+            <div class="hours-row">
+                <div class="hours-day">Subota</div>
+                <div class="hours-time">08:00 - 16:00</div>
+            </div>
+            <div class="hours-row">
+                <div class="hours-day">Nedelja</div>
+                <div class="closed-text">Ne radi</div>
+            </div>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <h2>9. Bezbednost podataka</h2>
         <p>
             Primenjujemo odgovarajuće tehničke i organizacione mere zaštite kako bismo zaštitili vaše 
             lične podatke od gubitka, zloupotrebe ili neovlašćenog pristupa. Naši serveri su zaštićeni 
             firewall-om i šifrovanjem.
         </p>
         
-        <h2>9. Kolačići (Cookies)</h2>
+        <h2>10. Kolačići (Cookies)</h2>
         <p>
             Naša aplikacija može koristiti kolačiće za poboljšanje korisničkog iskustva. Možete kontrolisati 
             korišćenje kolačića kroz podešavanja svog uređaja.
         </p>
         
-        <h2>10. Kontakt informacije</h2>
+        <h2>11. Kontakt informacije</h2>
         <div class="contact-info">
             <h3>Frizerski Salon New Cut</h3>
             <div class="contact-detail">
@@ -252,27 +464,27 @@
             </div>
             <div class="contact-detail">
                 <i class="fas fa-clock"></i>
-                <div>Radno vreme: Ponedeljak-Subota 09:00-20:00, Nedelja zatvoreno</div>
+                <div>Radno vreme: Ponedeljak-Petak 08:00-21:00, Subota 08:00-16:00, Nedelja zatvoreno</div>
             </div>
         </div>
         
-        <h2>11. Promene Politike privatnosti</h2>
+        <h2>12. Promene Politike privatnosti</h2>
         <p>
             Zadržavamo pravo da ažuriramo ovu Politiku privatnosti. Sve promene će biti objavljene na ovoj 
             stranici. Preporučujemo da povremeno pregledate ovu stranicu kako biste bili upoznati sa 
             našom politikom privatnosti.
         </p>
         
-        <h2>12. Zaštitnik podataka</h2>
+        <h2>13. Zaštitnik podataka</h2>
         <p>
             Za zaštitu vaših podataka i rešavanje pritužbi možete se obratiti:
-            <br>Email: dpo@newcut.rs
-            <br>Telefon: 061 6650838
+            <br><span class="highlight">Email: dpo@newcut.rs</span>
+            <br><span class="highlight">Telefon: 061 6650838</span>
         </p>
         
         <div class="footer">
-            <p>© 2024 Frizerski Salon New Cut. Sva prava zadržana.</p>
-            <p>Ova Politika privatnosti je važeća od 11. decembra 2024. godine.</p>
+            <p>© 2025 Frizerski Salon New Cut. Sva prava zadržana.</p>
+            <p>Ova Politika privatnosti je važeća od 14. decembra 2025. godine.</p>
         </div>
     </div>
 </body>
